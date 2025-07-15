@@ -20,9 +20,10 @@ connectDB();
 app.use(
   cors({
     origin: [
-      "https://catering-reservation-and-ordering-system-02d9.onrender.com/",
-      "https://catering-reservation-and-ordering-s.vercel.app/",
-    ], // Add both origins
+      "https://catering-reservation-and-ordering-system-02d9.onrender.com",
+      "https://catering-reservation-and-ordering-system-qv0wsow2t.vercel.app",
+      "https://catering-reservation-and-ordering-s.vercel.app",
+    ],
     credentials: true,
   })
 );
