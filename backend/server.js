@@ -21,7 +21,7 @@ app.use(
   cors({
     origin: [
       "https://catering-reservation-and-ordering-system-02d9.onrender.com/",
-      "http://localhost:5000",
+      "https://catering-reservation-and-ordering-s.vercel.app/",
     ], // Add both origins
     credentials: true,
   })
