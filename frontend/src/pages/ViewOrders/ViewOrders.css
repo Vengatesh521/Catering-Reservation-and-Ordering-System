@@ -1,0 +1,152 @@
+.orders-page {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.orders-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.no-orders {
+  font-size: 1.125rem;
+  color: #4a5568;
+  text-align: center;
+  padding: 3rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.orders-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.order-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.order-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.order-id {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #2d3748;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order-status {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: capitalize;
+}
+
+.order-status-pending {
+  background-color: #fefcbf;
+  color: #b7791f;
+}
+
+.order-status-shipped {
+  background-color: #bee3f8;
+  color: #2b6cb0;
+}
+
+.order-status-delivered {
+  background-color: #c6f6d5;
+  color: #2f855a;
+}
+
+.order-total {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-top: 0.5rem;
+}
+
+.order-products {
+  margin-top: 1rem;
+}
+
+.order-product {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f7fafc;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.order-product:hover {
+  background-color: #edf2f7;
+}
+
+.order-product-image {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 0.375rem;
+  border: 1px solid #e2e8f0;
+}
+
+.order-product-details {
+  flex: 1;
+}
+
+.order-product-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2d3748;
+}
+
+.order-product-quantity,
+.order-product-price {
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+@media (max-width: 640px) {
+  .orders-title {
+    font-size: 1.75rem;
+  }
+
+  .order-card {
+    padding: 1rem;
+  }
+
+  .order-product-image {
+    width: 48px;
+    height: 48px;
+  }
+
+  .order-id {
+    font-size: 1rem;
+  }
+}

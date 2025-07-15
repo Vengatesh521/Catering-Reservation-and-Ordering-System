@@ -1,0 +1,24 @@
+.view-products-page {
+  padding: 10px 30px;
+  text-align: center;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.view-products-page h2 {
+  font-size: 2rem;
+  color: #d32f2f;
+  margin-bottom: 30px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.no-products {
+  font-size: 1.2rem;
+  color: #999;
+}
