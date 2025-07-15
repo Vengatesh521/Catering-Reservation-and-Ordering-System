@@ -19,7 +19,10 @@ connectDB();
 //middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5000"], // Add both origins
+    origin: [
+      "https://catering-reservation-and-ordering-system-02d9.onrender.com/",
+      "http://localhost:5000",
+    ], // Add both origins
     credentials: true,
   })
 );
@@ -48,3 +51,5 @@ app.listen(PORT, () => {
 //https://full-stack-student-teacher-booking.onrender.com
 
 //mongodb+srv://vinex521:vinex521@cluster2.yha0uil.mongodb.net/?retryWrites=true&w=majority&appName=Cluster2
+
+//https://catering-reservation-and-ordering-system-02d9.onrender.com/

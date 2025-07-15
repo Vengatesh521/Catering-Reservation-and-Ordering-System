@@ -26,9 +26,13 @@ const Login = () => {
     }
 
     axios
-      .post("http://localhost:5000/api/auth/login", values, {
-        withCredentials: true,
-      })
+      .post(
+        "https://catering-reservation-and-ordering-system-02d9.onrender.com/api/auth/login",
+        values,
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         setMessage("✅ " + res.data.message);
         setMessageType("success");
@@ -42,7 +46,10 @@ const Login = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/auth/profile", { withCredentials: true })
+      .get(
+        "https://catering-reservation-and-ordering-system-02d9.onrender.com/api/auth/profile",
+        { withCredentials: true }
+      )
       .then(() => navigate("/"))
       .catch(() => {});
   }, [navigate]);

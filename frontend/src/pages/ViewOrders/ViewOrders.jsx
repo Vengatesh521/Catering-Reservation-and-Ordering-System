@@ -9,9 +9,12 @@ function ViewOrders() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/auth/check-auth", {
-        withCredentials: true,
-      })
+      .get(
+        "https://catering-reservation-and-ordering-system-02d9.onrender.com/api/auth/check-auth",
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         if (res.data.isAuthenticated) {
           const currentUser = res.data.user;
@@ -19,7 +22,7 @@ function ViewOrders() {
 
           axios
             .get(
-              `http://localhost:5000/api/orders/my-orders?userId=${currentUser._id}`
+              `https://catering-reservation-and-ordering-system-02d9.onrender.com/api/orders/my-orders?userId=${currentUser._id}`
             )
             .then((res) => setOrders(res.data))
             .catch((err) => console.error("Error loading orders:", err));

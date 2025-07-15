@@ -55,9 +55,12 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/auth/check-auth", {
-        withCredentials: true,
-      })
+      .get(
+        "https://catering-reservation-and-ordering-system-02d9.onrender.com/api/auth/check-auth",
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         if (res.data.isAuthenticated) {
           setUser(res.data.user);

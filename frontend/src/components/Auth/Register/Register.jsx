@@ -43,7 +43,10 @@ const Register = () => {
     }
 
     axios
-      .post("http://localhost:5000/api/auth/register", values)
+      .post(
+        "https://catering-reservation-and-ordering-system-02d9.onrender.com/api/auth/register",
+        values
+      )
       .then((res) => {
         setMessage("✅ " + res.data.message);
         setMessageType("success");

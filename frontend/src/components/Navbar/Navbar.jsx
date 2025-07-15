@@ -21,7 +21,7 @@ const Navbar = ({ user }) => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/api/auth/logout",
+        "https://catering-reservation-and-ordering-system-02d9.onrender.com/api/auth/logout",
         {},
         { withCredentials: true }
       );

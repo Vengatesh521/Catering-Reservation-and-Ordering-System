@@ -15,7 +15,9 @@ function ViewProducts() {
   // ✅ Fetch products + auth
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get(
+        "https://catering-reservation-and-ordering-system-02d9.onrender.com/api/products"
+      )
       .then((res) => {
         console.log("Fetched products:", res.data);
 
@@ -30,9 +32,12 @@ function ViewProducts() {
       .catch((err) => console.error("Error fetching products:", err));
 
     axios
-      .get("http://localhost:5000/api/auth/check-auth", {
-        withCredentials: true,
-      })
+      .get(
+        "https://catering-reservation-and-ordering-system-02d9.onrender.com/api/auth/check-auth",
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         if (res.data.isAuthenticated) setUser(res.data.user);
         else setUser(null);
@@ -52,9 +57,13 @@ function ViewProducts() {
     };
 
     try {
-      await axios.post("http://localhost:5000/api/orders/place", orderData, {
-        withCredentials: true,
-      });
+      await axios.post(
+        "https://catering-reservation-and-ordering-system-02d9.onrender.com/api/orders/place",
+        orderData,
+        {
+          withCredentials: true,
+        }
+      );
       setMessage("✅ Order placed successfully! Redirecting...");
       setTimeout(() => {
         navigate("/my-orders");
