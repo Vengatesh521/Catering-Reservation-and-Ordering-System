@@ -26,7 +26,7 @@ const Navbar = ({ user }) => {
         { withCredentials: true }
       );
       localStorage.clear();
-      navigate("/login");
+      window.location.href = "/login";
     } catch (err) {
       console.error("Logout failed", err);
     }
