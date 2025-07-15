@@ -27,7 +27,6 @@ const Navbar = ({ user }) => {
       );
       localStorage.clear();
       navigate("/login");
-      window.location.reload();
     } catch (err) {
       console.error("Logout failed", err);
     }
