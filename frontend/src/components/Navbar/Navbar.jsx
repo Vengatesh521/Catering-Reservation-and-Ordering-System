@@ -47,7 +47,14 @@ const Navbar = ({ user }) => {
 
         {user ? (
           <>
-            <span className="username">👤 {user.username || user.name}</span>
+            <span
+              className="username clickable"
+              onClick={() => navigate("/profile")}
+              title="View Profile"
+            >
+              👤 {user.username || user.name}
+            </span>
+
             <button className="logout-button" onClick={handleLogout}>
               🚪 Logout
             </button>

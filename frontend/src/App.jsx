@@ -18,6 +18,7 @@ import ViewProducts from "./pages/View Products/ViewProducts";
 import Cart from "./pages/Cart/Cart";
 import ViewOrders from "./pages/ViewOrders/ViewOrders";
 import ViewMyProductOrders from "./pages/ViewMyProductOrders/ViewMyProductOrders";
+import UserProfile from "./pages/UserProfile/UserProfile";
 
 // CSS
 import "./App.css";
@@ -71,6 +72,14 @@ const App = () => {
           element={
             <ProtectedRoute>
               <ViewMyProductOrders />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <UserProfile />
             </ProtectedRoute>
           }
         />

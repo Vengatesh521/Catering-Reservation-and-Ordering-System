@@ -132,3 +132,12 @@
   border-radius: 50%;
   font-weight: bold;
 }
+.username.clickable {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.username.clickable:hover {
+  text-decoration: underline;
+  color: #ffd54f;
+}
